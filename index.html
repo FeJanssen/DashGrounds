@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JKB Grounds – Kunden Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>JKB Grounds – Dashboard</h1>
+  </header>
+
+  <main>
+    <!-- Ansicht 1: Vereine -->
+    <section id="view-vereine">
+      <h2>Vereine</h2>
+      <div id="vereine-status" class="status">Lade Vereine…</div>
+      <div id="vereine-list" class="card-grid"></div>
+    </section>
+
+    <!-- Ansicht 2: Buchungen eines Vereins -->
+    <section id="view-buchungen" hidden>
+      <button id="btn-back" class="back-btn">&larr; Zurück zu den Vereinen</button>
+      <h2 id="verein-title"></h2>
+      <div id="buchungen-status" class="status">Lade Buchungen…</div>
+      <table id="buchungen-table" hidden>
+        <thead>
+          <tr>
+            <th>Datum / Zeit</th>
+            <th>Person</th>
+            <th>Platz</th>
+            <th>Status</th>
+            <th>Preis</th>
+          </tr>
+        </thead>
+        <tbody id="buchungen-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
